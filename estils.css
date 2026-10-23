@@ -1,0 +1,49 @@
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+.etiqueta, .dada {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+}
+/*-----HERO-----*/
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 15%, #f3dce8, transparent 60%),
+    radial-gradient(ellipse at 60% 0%, #fae6d1, transparent 55%),
+    #fbfbfa;
+}
+
+.hero-graph {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse, #000 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse, #000 60%, transparent 100%);
+}
+
+.hero-graph canvas {
+  display: block;
+  background: transparent;
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .hero-graph {
+    display: none !important;
+  }
+}
