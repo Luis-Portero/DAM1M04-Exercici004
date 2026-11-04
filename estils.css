@@ -194,9 +194,109 @@ h2 {
 }
 .card-core h3 { margin: 0; }
 
+/*seccion 4*/
+/*-----CAMPO (sección oscura)-----*/
+.campo {
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(145, 198, 168, 0.25), transparent 50%),
+    radial-gradient(ellipse at 100% 40%, rgba(193, 117, 156, 0.2), transparent 50%),
+    #0b0b0d;
+}
+
+.campo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* las etiquetas de la sección clara son grises; aquí van en gris claro */
+.campo .etiqueta-seccion,
+.campo-unidad,
+.campo-datos-titulo {
+  color: #9a9a9a;
+}
+
+.campo-cifra {
+  font-size: clamp(4rem, 11vw, 8rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 16px 0 12px;
+}
+
+.campo-unidad {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin: 0 0 32px;
+}
+
+.campo-parrafo {
+  max-width: 34em;
+  color: #cfcfcf;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+.campo-nota {
+  max-width: 34em;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #8a8a8a;
+  margin: 0;
+}
+
+/* tarjeta de datos */
+.campo-datos {
+  position: relative;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+/* línea de degradado en el borde superior */
+.campo-datos::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c1759c, #8eabcb, #91c6a8, #dfc17e);
+}
+
+.campo-datos-titulo {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin: 0 0 16px;
+}
+
+.campo-datos table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.campo-datos th,
+.campo-datos td {
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+.campo-datos th {
+  text-align: left;
+  font-weight: 400;
+  color: #b5b5b5;
+}
+.campo-datos td {
+  text-align: right;
+  font-size: 1.3rem;
+}
+
 /*-----MÓVIL-----*/
 @media (max-width: 767px) {
   .nav-links, .pill { display: none; }
   .hero { padding-top: calc(var(--navH) + 24px); }
+
   .hero-actions { margin-bottom: 40px; }
+
+  .campo-grid { grid-template-columns: 1fr; gap: 40px; }
 }
