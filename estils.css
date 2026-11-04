@@ -96,6 +96,11 @@ img { max-width: 100%; display: block; }
 /*-----HERO (añadidos)-----*/
 .hero { padding-top: calc(var(--navH) + 48px); }
 
+.hero-graph { 
+  position: absolute;
+  z-index: -10;
+}
+
 .hero-icon { width: 40px; height: 40px; margin-bottom: 24px; }
 
 .hero h1 {
