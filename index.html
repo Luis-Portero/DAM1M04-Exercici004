@@ -228,6 +228,72 @@
         </ul>
     </div>
     </section>
+    <!---seccion 6-->
+    <section id="atlas" class="atlas">
+    <div class="container">
+        <p class="etiqueta etiqueta-seccion etiqueta-verde">STRATA ATLAS</p>
+        <h2>Your firm’s knowledge, made operational.</h2>
+        <p class="atlas-intro">The knowledge that runs your firm lives in people’s heads. Atlas puts it to work.</p>
+
+        <img class="atlas-img" src="assets/img/atlas.png" alt="Strata Atlas, el mapa de conocimiento del despacho">
+
+        <ol class="pasos">
+            <li>
+                <h3>Map.</h3>
+                <p>Atlas learns how your firm actually works.</p>
+            </li>
+            <li>
+                <h3>Structure.</h3>
+                <p>Your knowledge, organized so an agent can act on it.</p>
+            </li>
+            <li>
+                <h3>Operate.</h3>
+                <p>Agents run the work. Recovery reported every week.</p>
+            </li>
+            <li>
+                <h3>Refine.</h3>
+                <p>Ask it anything. Correct what it misses. The map stays yours.</p>
+            </li>
+        </ol>
+
+        <p class="atlas-nota">It’s not a black box. Watch it reason, follow the connections it draws, and correct what it gets wrong.</p>
+
+        <div class="atlas-extra">
+            <!-- Columna izquierda: Buscador + Tarjeta de respuesta -->
+            <div class="atlas-consulta">
+                <form class="ask" onsubmit="return false">
+                    <label class="ask-label" for="pregunta">Ask anything about how your firm operates.</label>
+                    <span class="ask-icon">⌕</span>
+                    <input id="pregunta" type="text" value="A carrier just reduced one of our invoices. What happens next?">
+                    <button type="submit" class="btn btn-dark">Ask</button>
+                </form>
+
+                <div class="ask-respuesta">
+                    <p class="resp-pregunta">A carrier just reduced one of our invoices. What happens next?</p>
+                    <p class="resp-texto">Atlas drafts an <strong>appeal</strong> citing the specific guideline the reduction violated, routes it to the <strong>Billing Partner</strong> for sign-off, and tracks it until the amount is recovered or formally written off.</p>
+                    <p class="resp-pie"><span class="punto-verde"></span> Traced across 6 nodes in your operational map.</p>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Nodos editables -->
+            <div class="atlas-nodos">
+                <p class="etiqueta etiqueta-seccion">EDITABLE NODES</p>
+                <div class="nodos">
+                    <article class="nodo">
+                        <p class="etiqueta nodo-titulo"><span class="punto-verde"></span> FEE WRITE-OFF APPROVAL</p>
+                        <p class="nodo-texto">Write-offs over $5,000 route to the Managing Partner for sign-off.</p>
+                        <p class="nodo-estado">✓ Confirmed by your firm</p>
+                    </article>
+                    <article class="nodo">
+                        <p class="etiqueta nodo-titulo"><span class="punto-verde"></span> CLIENT INTAKE GATE</p>
+                        <p class="nodo-texto">Conflicts must clear and billing guidelines attach before a matter opens.</p>
+                        <p class="nodo-estado">✓ Confirmed by your firm</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
 

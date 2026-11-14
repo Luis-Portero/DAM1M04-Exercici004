@@ -563,7 +563,197 @@ h2 {
   transform: translateX(6px);
   color: #1a1a1a;
 }
+/*Seccion 6*/
 
+/*-----ATLAS-----*/
+.atlas h2 { max-width: 12em; margin-bottom: 24px; }
+.atlas-intro {
+  max-width: 36em;
+  color: var(--gris);
+  line-height: 1.6;
+  margin: 0 0 48px;
+}
+.atlas-img {
+  width: 100%;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.08);
+  margin-bottom: 56px;
+}
+
+/* los 4 pasos y sus rayas superiores */
+.pasos {
+  list-style: none;
+  margin: 0 0 56px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.pasos li {
+  padding-top: 20px;
+  border-top: 2px solid var(--texto);
+}
+.pasos h3 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+}
+.pasos p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gris);
+  margin: 0;
+}
+
+/* Frase intermedia ("It's not a black box...") */
+.atlas-nota {
+  max-width: 32em;
+  font-size: 1.15rem;
+  color: var(--texto);
+  line-height: 1.5;
+  margin: 0 0 48px;
+}
+
+/* Parte inferior: Buscador/Respuesta (izq) + Nodos (der) */
+.atlas-extra {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Buscador */
+.ask {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 16px;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.ask:focus-within {
+  border-color: #8eabcb;
+  box-shadow: 0 5px 15px 2px rgba(142, 171, 203, 0.25);
+}
+.ask-icon {
+  color: var(--gris);
+  font-size: 18px;
+}
+.ask input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 8px 4px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--texto);
+  background: transparent;
+}
+.ask button {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.ask-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Tarjeta de respuesta debajo del buscador */
+.ask-respuesta {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.resp-pregunta {
+  font-size: 13px;
+  color: var(--gris);
+  margin: 0 0 16px;
+}
+.resp-texto {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--texto);
+  margin: 0 0 20px;
+}
+.resp-texto strong {
+  font-weight: 600;
+}
+.resp-pie {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gris);
+  margin: 0;
+}
+
+/* Puntito verde reutilizable */
+.punto-verde {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2f7a52;
+  flex-shrink: 0;
+}
+
+/* Nodos editables (columna derecha) */
+.atlas-nodos .etiqueta-seccion {
+  margin-bottom: 16px;
+}
+.nodos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.nodo {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #cce3d6; /* borde sutil verdoso como en la captura */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nodo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.08);
+}
+.nodo-titulo {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--gris);
+  margin: 0 0 14px;
+}
+.nodo-titulo .punto-verde {
+  margin-top: 4px;
+}
+.nodo-texto {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--texto);
+  margin: 0 0 20px;
+}
+.nodo-estado {
+  font-size: 12px;
+  color: #2f7a52;
+  margin: 0;
+}
 /*-----MÓVIL-----*/
 @media (max-width: 767px) {
   .nav-links, .pill { display: none; }
@@ -589,5 +779,12 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+  .pasos {
+    grid-template-columns: 1fr; gap: 20px; 
+  }
+
+  .atlas-extra, .nodos {
+   grid-template-columns: 1fr; gap: 24px; 
   }
 }
