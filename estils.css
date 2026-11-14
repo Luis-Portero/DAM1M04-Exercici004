@@ -574,6 +574,16 @@ h2 {
 /*Seccion 6*/
 
 /*-----ATLAS-----*/
+.etiqueta-verde::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #43b581, #1e88e5);
+  margin-right: 12px;
+  vertical-align: middle;
+}
 .atlas h2 { max-width: 12em; margin-bottom: 24px; }
 .atlas-intro {
   max-width: 36em;
